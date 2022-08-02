@@ -1,0 +1,14 @@
+{% block content %}
+  <h1>department INfo</h1>
+  {% if department_list %}
+  <table border>
+    {% for department in department_list %}
+      <tr>
+       <td> {{ department.D_name }}</td><td> {{ department.start_year }}</td> <td>{{department.D_loction}}</td><td>{{department.intake}}</td>
+       </tr>
+    {% endfor %}
+    </table>
+  {% else %}
+    <p>There are no deparments .</p>
+  {% endif %}       
+{% endblock %}

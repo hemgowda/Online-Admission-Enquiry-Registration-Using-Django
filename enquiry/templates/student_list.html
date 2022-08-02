@@ -1,0 +1,15 @@
+
+{% block content %}
+  <h1>Student INfo</h1>
+  {% if student_list %}
+  <table border>
+    {% for student in student_list %}
+      <tr>
+       <td> {{ student.name }}</td> <td>{{student.qualifying_exam}}</td><td>{{student.email}}</td>
+       </tr>
+    {% endfor %}
+    </table>
+  {% else %}
+    <p>There are no student in the admission.</p>
+  {% endif %}       
+{% endblock %}
